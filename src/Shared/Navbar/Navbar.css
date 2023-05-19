@@ -1,0 +1,12 @@
+.img2{
+    height: 120px;
+    width: 120px;
+    margin-top: 5px;
+}
+
+.profile-img{
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    height: 70px;
+    width: 70px;
+}
