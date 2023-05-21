@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ toy,handleDelete }) => {
-  const { customerName, photo, email, category,_id } = toy;
+  const { customerName, photo, email, category,_id,quantity } = toy;
 
 
 
@@ -46,12 +46,19 @@ const BookCard = ({ toy,handleDelete }) => {
         <td>
           <span className="badge badge-ghost badge-sm">{email}</span>
         </td>
+        <td>
+          <span className="badge badge-ghost badge-sm">{quantity}</span>
+        </td>
 
         <th>
-          <Link to={`/update/${_id}`}><button className="btn btn-ghost btn-xs">Update</button></Link>
+          <Link to={`/update/${_id}`}><button className="btn btn-primary">Update</button></Link>
         </th>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+        <Link to={`/book/${_id}`}>
+          <button className="flex items-center gap-2 btn btn-primary">
+            Details
+          </button>
+        </Link>
         </th>
       </tr>
     </div>

@@ -10,7 +10,7 @@ const AllToy = () => {
 
 
 useEffect(() => {
-    fetch(`https://toy-web-server-side.vercel.app/AllToyShow?page=${showPage}`)
+    fetch(`http://localhost:5000/AllToyShow?page=${showPage}`)
         .then((res) => res.json())
         .then((data) => {
             setAllToy(data.data);

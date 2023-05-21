@@ -7,7 +7,7 @@ import './Main.css'
 
 const Main = () => {
   return (
-    <div className="mt-2 mb-2">
+    <div className="mt-2 mb-2 container mx-auto">
       <Navbar></Navbar>
       <Marquee>
        <div  className="flex items-center bg-slate-700 mt-5">

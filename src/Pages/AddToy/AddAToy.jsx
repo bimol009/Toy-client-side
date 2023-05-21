@@ -86,15 +86,7 @@ const AddAToy = () => {
                 className="input input-bordered"
               />
             </div>
-            <div className="form-control">
-              <input
-                type="text"
-                name="quantity"
-                required
-                placeholder="photo url"
-                className="input input-bordered"
-              />
-            </div>
+          
             <div className="form-control">
               <input
                 type="text"
@@ -113,11 +105,7 @@ const AddAToy = () => {
                 className="input input-bordered"
               />
             </div>
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">CateGory</span>
-            </label>
+            <div className="form-control">
             <input
               type="text"
               name="category"
@@ -127,6 +115,18 @@ const AddAToy = () => {
               placeholder="Category"
             />
           </div>
+            <div className="form-control">
+            <input
+              type="text"
+              name="quantity"
+              required
+            
+              className="input input-bordered"
+              placeholder="Quantity"
+            />
+          </div>
+          </div>
+      
           <div className="form-control mt-6">
             <button className="btn btn-error btn-block">Proceed</button>
           </div>

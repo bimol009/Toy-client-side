@@ -118,13 +118,9 @@ const Update = () => {
                 <span className="label-text">About</span>
               </label>
               <label className="input-group">
-                <input
-                  type="text"
-                  name="about"
-           
-                  placeholder="About"
-                  className="input input-bordered w-full"
-                />
+               
+                <textarea className="textarea input-group"type="text"
+                  name="about" placeholder="Bio"></textarea>
               </label>
             </div>
           </div>

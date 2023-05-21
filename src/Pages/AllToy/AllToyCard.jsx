@@ -5,7 +5,7 @@ import { FaArrowRight, FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 
 const AllToyCard = ({ toy }) => {
-  const { price, picture, name, _id, rating, category } = toy;
+  const { price, picture, name, _id, rating, category,quantity } = toy;
   console.log(toy);
 
   return (
@@ -35,9 +35,7 @@ const AllToyCard = ({ toy }) => {
         placeholderSymbol={<FaStar className="text-warning"></FaStar>}
         fullSymbol={<FaStar></FaStar>}
       ></Rating></th>
-      <th>
-        <button className="btn btn-ghost btn-xs">details</button>
-      </th>
+     
       <th>
         <Link to={`/book/${_id}`}>
           <button className="flex items-center gap-2 btn btn-primary">
