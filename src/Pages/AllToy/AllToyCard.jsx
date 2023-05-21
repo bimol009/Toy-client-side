@@ -26,16 +26,25 @@ const AllToyCard = ({ toy }) => {
         <span className="badge badge-ghost badge-sm">{category}</span>
       </td>
       <td>{price}</td>
+      <td>{rating}</td>
+     <th> <Rating
+        placeholderRating={rating}
+        value={Math.round(rating || 0)}
+        emptySymbol={<FaRegStar></FaRegStar>}
+        readonly
+        placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+        fullSymbol={<FaStar></FaStar>}
+      ></Rating></th>
       <th>
         <button className="btn btn-ghost btn-xs">details</button>
       </th>
-    <th>
-    <Link to={`/book/${_id}`}>
-        <button className="flex items-center gap-2 btn btn-primary">
-          Details <FaArrowRight />
-        </button>
-      </Link>
-    </th>
+      <th>
+        <Link to={`/book/${_id}`}>
+          <button className="flex items-center gap-2 btn btn-primary">
+            Details <FaArrowRight />
+          </button>
+        </Link>
+      </th>
     </tr>
   );
 };

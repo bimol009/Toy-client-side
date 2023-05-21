@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BookCard = ({ toy,handleDelete }) => {
   const { customerName, photo, email, category,_id } = toy;
@@ -46,6 +47,9 @@ const BookCard = ({ toy,handleDelete }) => {
           <span className="badge badge-ghost badge-sm">{email}</span>
         </td>
 
+        <th>
+          <Link to={`/update/${_id}`}><button className="btn btn-ghost btn-xs">Update</button></Link>
+        </th>
         <th>
           <button className="btn btn-ghost btn-xs">details</button>
         </th>

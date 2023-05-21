@@ -5,7 +5,7 @@ import './Navbar.css'
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { user, logOutEmail,_id } = useContext(AuthContext);
+  const { user, logOutEmail} = useContext(AuthContext);
 
   const handleLogout = () => {
     logOutEmail()

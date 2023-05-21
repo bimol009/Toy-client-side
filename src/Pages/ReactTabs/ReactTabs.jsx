@@ -12,22 +12,22 @@ const ReactTabs = () => {
     const [sportsCar, setSportsCar] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/police")
+      fetch("https://toy-web-server-side.vercel.app/police")
         .then((res) => res.json())
         .then((data) => setPolice(data));
     }, []);
     useEffect(() => {
-      fetch("http://localhost:5000/truck")
+      fetch("https://toy-web-server-side.vercel.app/truck")
         .then((res) => res.json())
         .then((data) => setTruck(data));
     }, []);
     useEffect(() => {
-      fetch("http://localhost:5000/fireTruck")
+      fetch("https://toy-web-server-side.vercel.app/fireTruck")
         .then((res) => res.json())
         .then((data) => setFireTruck(data));
     }, []);
     useEffect(() => {
-      fetch("http://localhost:5000/sportsCar")
+      fetch("https://toy-web-server-side.vercel.app/sportsCar")
         .then((res) => res.json())
         .then((data) => setSportsCar(data));
     }, []);

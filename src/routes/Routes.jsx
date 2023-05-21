@@ -14,6 +14,7 @@ import BookMark from '../Pages/Bookmark/BookMark';
 import PrivateRoutes from './PrivateRoutes';
 import AddAToy from './../Pages/AddToy/AddAToy';
 import MyToy from '../Pages/AddToy/MyToy';
+import Update from '../Pages/AddToy/Update';
 
 const router = createBrowserRouter([
 
@@ -38,12 +39,17 @@ const router = createBrowserRouter([
       {
         path:'/addAToy',
         element:<PrivateRoutes><AddAToy></AddAToy></PrivateRoutes>,
-        loader:()=>fetch(`http://localhost:5000/AllToyShow`)
+        loader:()=>fetch(`https://toy-web-server-side.vercel.app/AllToyShow`)
       },
       {
         path:'/book/:id',
         element:<PrivateRoutes><BookMark></BookMark></PrivateRoutes>,
-        loader:({params})=>fetch(`http://localhost:5000/AllToyShow/${params.id}`)
+        loader:({params})=>fetch(`https://toy-web-server-side.vercel.app/AllToyShow/${params.id}`)
+      },
+      {
+        path:'/update/:id',
+        element:<Update></Update>,
+        loader:({params})=>fetch(`http://localhost:5000/addBook/${params.id}`)
       },
       {
         path:'/myToy',
