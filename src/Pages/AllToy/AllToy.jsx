@@ -19,6 +19,8 @@ const AllToy = () => {
             {
                 allToy?.map(toy=><AllToyCard key={toy._id} toy={toy}></AllToyCard>)
             }
+
+            
         </div>
     );
 };

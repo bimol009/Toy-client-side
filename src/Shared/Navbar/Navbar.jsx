@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import './Navbar.css'
 
-// import { FaShoppingCart, FaSearch } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const { user, logOutEmail } = useContext(AuthContext);
+  const { user, logOutEmail,_id } = useContext(AuthContext);
 
   const handleLogout = () => {
     logOutEmail()
@@ -39,7 +38,10 @@ const Navbar = () => {
               )}
               {user && <p className="text-white">{user.displayName}</p>}
             <li>
-              <Link to="/bookings">Add a Toy</Link>
+              <Link to={'/addAToy'}>Add a Toy</Link>
+            </li>
+            <li>
+              <Link to="/myToy">My Toy</Link>
             </li>
             <button onClick={handleLogout}>Logout</button>
           </>

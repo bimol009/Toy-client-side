@@ -7,35 +7,40 @@ const Sports = ({ sports }) => {
   const { price, picture, name, _id, rating } = sports;
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img src={picture} alt="Shoes" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-center">{name}</h2>
-          <div className="card-actions justify-between">
-            <p className="font-bold text-red-500">Price: {price}</p>
-            <div>
-              <p className="font-bold text-red-500">Price: {rating}</p>
+    <div className="card w-96 bg-base-100 shadow-xl">
+      <figure>
+        <img src={picture} alt="Shoes" />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title text-center">{name}</h2>
+  
+        <div className="card-actions justify-between">
+        <Link to={'/addAToy'}>
+            <button className="btn btn-primary">
+              Book
+            </button>
+          </Link>
+          <div>
+            <p className="font-bold text-red-500">Ratings: {rating}</p>
 
-              <Rating
-                placeholderRating={rating}
-                value={Math.round(rating || 0)}
-                emptySymbol={<FaRegStar></FaRegStar>}
-                readonly
-                placeholderSymbol={<FaStar className="text-warning"></FaStar>}
-                fullSymbol={<FaStar></FaStar>}
-              ></Rating>
-            </div>
-            <Link to={`/checkout/${_id}`}>
-              <button className="flex items-center gap-2">
-                Details <FaArrowRight />
-              </button>
-            </Link>
+            <Rating
+              placeholderRating={rating}
+              value={Math.round(rating || 0)}
+              emptySymbol={<FaRegStar></FaRegStar>}
+              readonly
+              placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+              fullSymbol={<FaStar></FaStar>}
+            ></Rating>
           </div>
+          <Link to={`/book/${_id}`}>
+            <button className="flex items-center gap-2 btn btn-primary">
+              Details <FaArrowRight />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
