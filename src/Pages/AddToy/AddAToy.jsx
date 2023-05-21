@@ -16,14 +16,16 @@ const AddAToy = () => {
     const email = form.email.value;
     const name = form.name.value;
     const photo = form.photo.value;
+    const quantity = form.quantity.value;
     const category = form.category.value;
     const price = form.price.value;
 
     const CheckBook = {
       customerName: name,
       email,
-      category,
+      SubCategory:category,
       photo,
+      quantity,
       price: price,
     };
     console.log(CheckBook)
@@ -79,6 +81,15 @@ const AddAToy = () => {
               <input
                 type="text"
                 name="photo"
+                required
+                placeholder="photo url"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="text"
+                name="quantity"
                 required
                 placeholder="photo url"
                 className="input input-bordered"

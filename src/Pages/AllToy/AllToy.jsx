@@ -1,28 +1,45 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import AllToyCard from './AllToyCard';
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import AllToyCard from "./AllToyCard";
 
 const AllToy = () => {
+  const [allToy, setAllToy] = useState();
 
-    const [allToy,setAllToy] = useState()
+  useEffect(() => {
+    fetch("http://localhost:5000/AllToyShow/")
+      .then((res) => res.json())
+      .then((data) => setAllToy(data));
+  }, []);
 
-    useEffect(() => {
-        fetch("http://localhost:5000/AllToyShow/")
-          .then((res) => res.json())
-          .then((data) => setAllToy(data));
-      }, []);
-
-
-    return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 mb-5">
-            {
-                allToy?.map(toy=><AllToyCard key={toy._id} toy={toy}></AllToyCard>)
-            }
-
-            
-        </div>
-    );
+  return (
+    <div>
+      <div className="overflow-x-auto w-full">
+        <table className="table w-full">
+          <thead>
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <div className="grid grid-cols-1 gap-4 overflow-x-auto w-full table">
+              {allToy?.map((toy) => (
+                <AllToyCard key={toy._id} toy={toy}></AllToyCard>
+              ))}
+            </div>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 };
 
 export default AllToy;
