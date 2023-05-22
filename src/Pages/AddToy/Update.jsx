@@ -10,6 +10,7 @@ const Update = () => {
     e.preventDefault();
     const from = e.target;
     const name = from.name.value;
+    const customerName = from.customerName.value;
     const quantity = from.quantity.value;
     const category = from.category.value;
     const about = from.about.value;
@@ -17,7 +18,7 @@ const Update = () => {
     const price = from.price.value;
 
     const newToy = {
-      customerName: name,
+      customerName: customerName,
       name,
       quantity,
       category,
@@ -54,28 +55,28 @@ const Update = () => {
           <div className="md:flex mb-8">
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text font-bold">Update Toy</span>
+                <span className="label-text font-bold">customer Name</span>
               </label>
               <label className="input-group">
                 <input
                   type="text"
-                  name="name"
+                  name="customerName"
                   defaultValue={customerName}
-                  placeholder="Coffee Name"
+                  placeholder="Customer name"
                   className="input input-bordered w-full"
                 />
               </label>
             </div>
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text font-bold">Update Toy</span>
+                <span className="label-text font-bold">Toy Name</span>
               </label>
               <label className="input-group">
                 <input
                   type="text"
                   name="name"
                   defaultValue={name}
-                  placeholder="Coffee Name"
+                  placeholder="Name"
                   className="input input-bordered w-full"
                 />
               </label>
