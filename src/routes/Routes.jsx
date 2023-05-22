@@ -15,13 +15,16 @@ import PrivateRoutes from './PrivateRoutes';
 import AddAToy from './../Pages/AddToy/AddAToy';
 import MyToy from '../Pages/AddToy/MyToy';
 import Update from '../Pages/AddToy/Update';
+import ErrorPage from '../errorPage/ErrorPage';
 
 const router = createBrowserRouter([
 
+  
 
   {
     path:'/',
     element:<Main></Main>,
+    
     children:[
       {
         path:'/',
@@ -54,12 +57,17 @@ const router = createBrowserRouter([
       {
         path:'/myToy',
         element:<MyToy></MyToy>
-      }
+      },
+      
       
     
     
      
     ]
+  },
+  {
+    path:'*',
+    element:<ErrorPage/>
   },
   {
     path:'/',

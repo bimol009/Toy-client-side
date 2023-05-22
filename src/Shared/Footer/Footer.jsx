@@ -13,8 +13,8 @@ const Footer = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div>
-      <footer className="footer p-10 bg-black text-white">
+    <div className="rounded">
+      <footer className="footer p-10 bg-black text-white rounded-xl">
         <div>
         <>
       <li className="font-bold text-3xl">
@@ -121,7 +121,7 @@ const Footer = () => {
     </>
         </div>
       </footer>
-      <footer className="footer px-10 py-4 border-t bg-black text-white border-base-300">
+      <footer className="footer px-10 py-4 border-t bg-black text-white border-base-300 rounded-xl">
         <div className="items-center grid-flow-col">
        <img src="https://i.ibb.co/tQt2vL9/240-F-248279748-Re9qnj7-RFjtf2lb-LVqnr5-SAQ7h-WGx3-DE-removebg-preview.png" alt="" />
           <p>

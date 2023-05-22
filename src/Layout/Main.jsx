@@ -9,8 +9,8 @@ const Main = () => {
   return (
     <div className="mt-2 mb-2 container mx-auto">
       <Navbar></Navbar>
-      <Marquee>
-       <div  className="flex items-center bg-slate-700 mt-5">
+      <Marquee className="rounded-xl">
+       <div  className="flex items-center  bg-red-200 mt-5 ">
        <img src="https://i.ibb.co/jvyJWJW/images-removebg-preview-1.png" alt="" />
         <img src="https://i.ibb.co/YjRJ1T5/download-removebg-preview.png" alt="" />
         <img src="https://i.ibb.co/TB7WhC3/download-1-removebg-preview-1.png" alt="" />

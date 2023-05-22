@@ -1,16 +1,16 @@
-import React from 'react';
-import { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider';
+import React from "react";
+import { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddAToy = () => {
-    const checkOutPage = useLoaderData();
+  const checkOutPage = useLoaderData();
 
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
 
-  const { price, picture, category,_id } = checkOutPage;
+  const { price, picture, category, } = checkOutPage;
 
-   const handleCheck = (e) => {
+  const handleCheck = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
@@ -23,40 +23,36 @@ const AddAToy = () => {
     const CheckBook = {
       customerName: name,
       email,
-      SubCategory:category,
+      SubCategory: category,
       photo,
       quantity,
       price: price,
     };
-    console.log(CheckBook)
-    fetch('http://localhost:5000/addBook',{
-        method: "POST",
-        headers: {
-          "content-type": "application/json", 
-          "Access-Control-Allow-Methods":'*',
-          "Access-Control-Allow-Headers":('Content-Type','X-Auth-Token','Origin','AuthoriZation'),
-        },
-        body: JSON.stringify(CheckBook),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data)
-          if(data.insertedId){
-              alert("service successfully")
-            }
+    console.log(CheckBook);
+    fetch("http://localhost:5000/addBook", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Headers":
+          ("Content-Type", "X-Auth-Token", "Origin", "AuthoriZation"),
+      },
+      body: JSON.stringify(CheckBook),
     })
-
-   
-
-}
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          alert("service successfully");
+        }
+      });
+  };
 
   return (
     <div>
-      <h2>Book: {name} </h2>
-
-      <div className="card-body">
-        <form onSubmit={handleCheck}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="card-body  bg-red-300 mt-5 mb-5 p-5 rounded-xl">
+        <form className="p-10" onSubmit={handleCheck}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-5">
             <div className="form-control">
               <input
                 type="text"
@@ -86,7 +82,7 @@ const AddAToy = () => {
                 className="input input-bordered"
               />
             </div>
-          
+
             <div className="form-control">
               <input
                 type="text"
@@ -106,29 +102,28 @@ const AddAToy = () => {
               />
             </div>
             <div className="form-control">
-            <input
-              type="text"
-              name="category"
-              required
-              defaultValue={category}
-              className="input input-bordered"
-              placeholder="Category"
-            />
-          </div>
+              <input
+                type="text"
+                name="category"
+                required
+                defaultValue={category}
+                className="input input-bordered"
+                placeholder="Category"
+              />
+            </div>
             <div className="form-control">
-            <input
-              type="text"
-              name="quantity"
-              required
-            
-              className="input input-bordered"
-              placeholder="Quantity"
-            />
+              <input
+                type="text"
+                name="quantity"
+                required
+                className="input input-bordered"
+                placeholder="Quantity"
+              />
+            </div>
           </div>
-          </div>
-      
+
           <div className="form-control mt-6">
-            <button className="btn btn-error btn-block">Proceed</button>
+            <button className="btn btn-primary font-bold btn-block">Proceed</button>
           </div>
         </form>
       </div>

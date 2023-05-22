@@ -3,8 +3,8 @@ import { useLoaderData } from "react-router-dom";
 
 const Update = () => {
   const AllToy = useLoaderData();
-  console.log(AllToy)
-  const { customerName, photo,price, email, picture,category, _id } = AllToy;
+  console.log(AllToy);
+  const { customerName, photo, price, email, picture, category, _id } = AllToy;
 
   const handleUpdateToy = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ const Update = () => {
     const category = from.category.value;
     const about = from.about.value;
     const photo = from.photo.value;
-    const price = from.price.value
+    const price = from.price.value;
 
     const newToy = {
       customerName: name,
@@ -22,7 +22,7 @@ const Update = () => {
       category,
       about,
       photo,
-      price
+      price,
     };
     console.log(newToy);
 
@@ -44,16 +44,16 @@ const Update = () => {
 
   return (
     <div>
-      <div className="bg-[#F4F3F0] p-24">
+      <div className=" bg-red-200 p-10 mt-5 mb-5 rounded-xl">
         <h2 className="text-3xl text-center mb-4 font-extrabold">
-        Update Your Toy {customerName}
+          Update Your Toy {customerName}
         </h2>
         <form onSubmit={handleUpdateToy}>
           {/* Row */}
           <div className="md:flex mb-8">
             <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text font-bold">Update Your Toy</span>
+                <span className="label-text font-bold">Update Toy</span>
               </label>
               <label className="input-group">
                 <input
@@ -81,8 +81,7 @@ const Update = () => {
           </div>
           {/* Row */}
           <div className="md:flex mb-8">
-      
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2">
               <label className="label">
                 <span className="label-text">price</span>
               </label>
@@ -90,16 +89,13 @@ const Update = () => {
                 <input
                   type="text"
                   name="price"
-            defaultValue={price}
+                  defaultValue={price}
                   placeholder="price"
                   className="input input-bordered w-full"
                 />
               </label>
             </div>
-          </div>
-          {/* Row */}
-          <div className="md:flex mb-8">
-            <div className="form-control md:w-1/2">
+            <div className="form-control md:w-1/2 ml-4">
               <label className="label">
                 <span className="label-text">Category</span>
               </label>
@@ -107,26 +103,15 @@ const Update = () => {
                 <input
                   type="text"
                   name="category"
-                defaultValue={category}
+                  defaultValue={category}
                   placeholder="Category Name"
                   className="input input-bordered w-full"
                 />
               </label>
             </div>
-            <div className="form-control md:w-1/2 ml-4">
-              <label className="label">
-                <span className="label-text">About</span>
-              </label>
-              <label className="input-group">
-               
-                <textarea className="textarea input-group"type="text"
-                  name="about" placeholder="Bio"></textarea>
-              </label>
-            </div>
           </div>
-
           {/* Row */}
-          <div className="md:flex mb-8">
+          <div className="mb-8">
             <div className="form-control w-full">
               <label className="label">
                 <span className="label-text">Photo Url</span>
@@ -139,6 +124,23 @@ const Update = () => {
                   placeholder="Photo Url"
                   className="input input-bordered w-full"
                 />
+              </label>
+            </div>
+          </div>
+
+          {/* Row */}
+          <div className="mb-8">
+            <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">About</span>
+              </label>
+              <label className="input-group">
+                <textarea
+                  className="textarea input-group"
+                  type="text"
+                  name="about"
+                  placeholder="about"
+                ></textarea>
               </label>
             </div>
           </div>

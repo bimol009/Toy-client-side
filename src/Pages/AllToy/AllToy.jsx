@@ -41,7 +41,7 @@ const handlePageChange = (page) => {
             </tr>
           </thead>
           <tbody>
-            <div className="grid grid-cols-1 gap-4 overflow-x-auto w-full table">
+            <div className="grid grid-cols-1 gap-4 overflow-x-auto w-full table justify-items-center">
               {allToy?.map((toy) => (
                 <AllToyCard key={toy._id} toy={toy}></AllToyCard>
               ))}
