@@ -16,6 +16,7 @@ import AddAToy from './../Pages/AddToy/AddAToy';
 import MyToy from '../Pages/AddToy/MyToy';
 import Update from '../Pages/AddToy/Update';
 import ErrorPage from '../errorPage/ErrorPage';
+import BlogPage from '../Pages/BlogPage/BlogPage';
 
 const router = createBrowserRouter([
 
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path:'/myToy',
         element:<MyToy></MyToy>
+      },
+      {
+        path:'/blog',
+        element:<BlogPage></BlogPage>
       },
       
       
