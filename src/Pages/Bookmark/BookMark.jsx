@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useContext} from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const BookMark = () => {
   const navigate = useNavigate();
@@ -9,8 +10,9 @@ const BookMark = () => {
     navigate(-1);
   };
   const ShowData = useLoaderData();
+  const {user} = useContext(AuthContext)
 
-  const { price, picture, name, category, about, rating } = ShowData;
+  const { price, picture, name, category, about, rating,quantity } = ShowData;
 
 
 
@@ -31,7 +33,10 @@ const BookMark = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">Name: {name}</h2>
+          <h2 className="card-title">Seller Name: {user?.displayName}</h2>
+          <h2 className="card-title">Email: {user?.email}</h2>
           <p>category: {category}</p>
+          <p>Quantity: {quantity}</p>
           <p>Ratings : {rating}</p>
           <Rating
             placeholderRating={rating}

@@ -10,7 +10,7 @@ const AddAToy = () => {
 
   const { user } = useContext(AuthContext);
 
-  const { price, picture, category, name } = checkOutPage;
+  const { price, picture, category, name,about } = checkOutPage;
 
   const handleCheck = (e) => {
     e.preventDefault();
@@ -31,6 +31,7 @@ const AddAToy = () => {
       photo,
       quantity,
       price: price,
+      about
     };
 
     fetch("https://toy-web-server-side.vercel.app/addBook", {
@@ -135,6 +136,19 @@ const AddAToy = () => {
               />
             </div>
           </div>
+          <div className="form-control w-full">
+              <label className="label">
+                <span className="label-text">About</span>
+              </label>
+              <label className="input-group">
+                <textarea
+                  className="textarea input-group"
+                  type="text"
+                  name="about"
+                  placeholder="about"
+                ></textarea>
+              </label>
+            </div>
 
           <div className="form-control mt-6">
             <button className="btn btn-primary font-bold btn-block">Proceed</button>
