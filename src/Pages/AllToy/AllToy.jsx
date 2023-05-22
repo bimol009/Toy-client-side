@@ -25,7 +25,7 @@ const AllToy = () => {
   const handleFilter = (event) => {
     setValue(event.target.value)
     const keyword = event.target.value;
-    const filtered = allToy.filter(item =>
+    const filtered = allToy?.filter(item =>
       item.name.toLowerCase().includes(keyword.toLowerCase())
     );
     setFilteredData(filtered);

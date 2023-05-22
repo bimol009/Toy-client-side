@@ -8,7 +8,7 @@ const AddAToy = () => {
 
   const { user } = useContext(AuthContext);
 
-  const { price, picture, category, } = checkOutPage;
+  const { price, picture, category, name } = checkOutPage;
 
   const handleCheck = (e) => {
     e.preventDefault();
@@ -60,6 +60,16 @@ const AddAToy = () => {
                 required
                 placeholder="Name"
                 defaultValue={user?.displayName}
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Name"
+                defaultValue={name}
                 className="input input-bordered"
               />
             </div>
