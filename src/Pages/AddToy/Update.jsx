@@ -47,7 +47,7 @@ const Update = () => {
     <div>
       <div className=" bg-red-200 p-10 mt-5 mb-5 rounded-xl">
         <h2 className="text-3xl text-center mb-4 font-extrabold">
-          Update Your Toy {name}
+          Update Your Toy {customerName}
         </h2>
         <form onSubmit={handleUpdateToy}>
           {/* Row */}
@@ -60,21 +60,22 @@ const Update = () => {
                 <input
                   type="text"
                   name="name"
-                  defaultValue={name}
+                  defaultValue={customerName}
                   placeholder="Coffee Name"
                   className="input input-bordered w-full"
                 />
               </label>
             </div>
-            <div className="form-control md:w-1/2 ml-4">
+            <div className="form-control md:w-1/2">
               <label className="label">
-                <span className="label-text">CustomerName</span>
+                <span className="label-text font-bold">Update Toy</span>
               </label>
               <label className="input-group">
                 <input
                   type="text"
-                  name="customerName"
-                  placeholder={customerName}
+                  name="name"
+                  defaultValue={name}
+                  placeholder="Coffee Name"
                   className="input input-bordered w-full"
                 />
               </label>
