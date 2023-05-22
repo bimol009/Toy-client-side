@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BookCard = ({ toy, handleDelete }) => {
   const { customerName, photo, email, category, _id, quantity,name } = toy;
-  console.log(toy)
+  
 
   return (
     <tr>

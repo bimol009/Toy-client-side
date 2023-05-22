@@ -24,7 +24,7 @@ const MyToy = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+     
           if (data.deletedCount > 0) {
             alert("SuccessFully Deleted Items");
             const remaining = bookCard.filter((book) => book._id !== id);

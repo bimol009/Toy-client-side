@@ -10,7 +10,7 @@ const AllToy = () => {
   const [totalPages, setTotalPages] = useState(1);
   const [value, setValue] = useState("");
   
-  console.log(value);
+
 
   useEffect(() => {
     fetch(`https://toy-web-server-side.vercel.app/AllToyShow?page=${showPage}`)

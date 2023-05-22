@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Update = () => {
   const AllToy = useLoaderData();
-  console.log(AllToy);
+ 
   const { customerName,name, photo, price, email, picture, category, _id } = AllToy;
 
   const handleUpdateToy = (e) => {
@@ -26,7 +26,7 @@ const Update = () => {
       photo,
       price,
     };
-    console.log(newToy);
+  
 
     fetch(`https://toy-web-server-side.vercel.app/addBook/${_id}`, {
       method: "PUT",
@@ -37,7 +37,6 @@ const Update = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
           alert("Updated SuccessFully");
         }

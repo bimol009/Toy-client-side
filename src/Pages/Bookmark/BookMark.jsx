@@ -12,7 +12,7 @@ const BookMark = () => {
 
   const { price, picture, name, category, about, rating } = ShowData;
 
-  console.log(ShowData);
+
 
   return (
     <div>

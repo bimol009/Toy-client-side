@@ -30,7 +30,7 @@ const AddAToy = () => {
       quantity,
       price: price,
     };
-    console.log(CheckBook);
+
     fetch("https://toy-web-server-side.vercel.app/addBook", {
       method: "POST",
       headers: {
@@ -43,7 +43,7 @@ const AddAToy = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+    
         if (data.insertedId) {
           alert("service successfully");
         }
