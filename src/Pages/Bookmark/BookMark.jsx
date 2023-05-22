@@ -1,9 +1,13 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 
 const BookMark = () => {
+  const navigate = useNavigate();
+  const navHandler = () => {
+    navigate(-1);
+  };
   const ShowData = useLoaderData();
 
   const { price, picture, name, category, about, rating } = ShowData;
@@ -12,7 +16,16 @@ const BookMark = () => {
 
   return (
     <div>
-      <div className="card lg:card-side bg-base-100 shadow-xl">
+      <div className="text-center mt-10 mb-10">
+        <h2 className="text-4xl mb-3 font-extrabold">
+           <span className="text-red-400">Details Show</span> Toy
+        </h2>
+        <p className="text-2xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, beatae!
+        </p>
+      </div>
+
+      <div className="card lg:card-side bg-base-100 shadow-xl mt-10 mb-10">
         <figure>
           <img src={picture} alt="Album" />
         </figure>
@@ -31,7 +44,9 @@ const BookMark = () => {
           <p>Price: {price}</p>
           <p>{about}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">ShowData</button>
+            <button onClick={navHandler} className="btn btn-primary">
+              Back
+            </button>
           </div>
         </div>
       </div>

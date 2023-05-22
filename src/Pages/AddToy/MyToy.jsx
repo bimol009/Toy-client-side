@@ -8,7 +8,7 @@ import BookCard from "./BookCard";
 const MyToy = () => {
   const [bookCard, setBookCard] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = `http://localhost:5000/addBook?email=${user?.email}`;
+  const url = `https://toy-web-server-side.vercel.app/addBook?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -19,7 +19,7 @@ const MyToy = () => {
   const handleDelete = (id) => {
     const proceed = confirm("Are you sure to delete This Items");
     if (proceed) {
-      fetch(`http://localhost:5000/addBook/${id}`, {
+      fetch(`https://toy-web-server-side.vercel.app/addBook/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -35,39 +35,41 @@ const MyToy = () => {
   };
 
   return (
-    <div className="overflow-x-auto w-full">
-      <table className="table w-full">
-        {/* head */}
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* row 1 */}
-          {bookCard?.map((toy) => (
+    
+    <div className="overflow-x-auto  w-full mt-5 mb-5">
+  <table className="table w-full">
+    {/* head */}
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" className="checkbox" />
+          </label>
+        </th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Quantity</th>
+        <th>Update Button</th>
+        <th>Details Button</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+     
+      {bookCard?.map((toy) => (
             <BookCard
               key={toy._id}
               toy={toy}
               handleDelete={handleDelete}
             ></BookCard>
           ))}
-        </tbody>
-        {/* foot */}
-        <tfoot>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-            <th></th>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
+    
+    </tbody>
+    
+    
+  </table>
+</div>
+
   );
 };
 

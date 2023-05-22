@@ -26,7 +26,7 @@ const Update = () => {
     };
     console.log(newToy);
 
-    fetch(`http://localhost:5000/addBook/${_id}`, {
+    fetch(`https://toy-web-server-side.vercel.app/addBook/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

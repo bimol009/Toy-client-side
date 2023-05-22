@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 const StyleToySection = () => {
   return (
     <div>
-      <div className="text-center mt-10 mb-10">
+      <div className="text-center">
         <h2 className="text-4xl mb-3 font-extrabold">
-          Book Your Toy <span className="text-red-400">Section</span>
+          Book Your  <span className="text-red-400">Toy</span>
         </h2>
         <p className="text-2xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, beatae!
         </p>
       </div>
 
-      <div className="hero min-h-screen ">
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.ibb.co/ZSfn8d4/mohit-suthar-0u-ZMa-Y-Ho4-unsplash.jpg"

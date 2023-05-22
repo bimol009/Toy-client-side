@@ -1,6 +1,9 @@
 import React from 'react';
 import './GallerySection.css'
 
+
+  
+
 const GallerySection = () => {
     return (
         <div className='text-center'>

@@ -23,29 +23,27 @@ const handlePageChange = (page) => {
 };
 
   return (
-    <div>
+    <div className="mt-5">
 
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
+        
               <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Category</th>
+              <th>Price</th>
               <th>Rating</th>
+              <th>Rating</th>
+            
             </tr>
           </thead>
           <tbody>
-            <div className="grid grid-cols-1 gap-4 overflow-x-auto w-full table justify-items-center">
+           
               {allToy?.map((toy) => (
                 <AllToyCard key={toy._id} toy={toy}></AllToyCard>
               ))}
-            </div>
+           
           </tbody>
         </table>
       </div>
