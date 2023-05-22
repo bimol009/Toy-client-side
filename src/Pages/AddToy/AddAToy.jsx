@@ -29,7 +29,7 @@ const AddAToy = () => {
       price: price,
     };
     console.log(CheckBook);
-    fetch("http://localhost:5000/addBook", {
+    fetch("https://toy-web-server-side.vercel.app/addBook", {
       method: "POST",
       headers: {
         "content-type": "application/json",

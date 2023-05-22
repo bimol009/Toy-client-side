@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   {
     path:'/',
     element:<Main></Main>,
-    
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
@@ -42,17 +42,17 @@ const router = createBrowserRouter([
       {
         path:'/addAToy',
         element:<PrivateRoutes><AddAToy></AddAToy></PrivateRoutes>,
-        loader:()=>fetch(`http://localhost:5000/AllToyShow`)
+        loader:()=>fetch(`https://toy-web-server-side.vercel.app/AllToyShow`)
       },
       {
         path:'/book/:id',
         element:<PrivateRoutes><BookMark></BookMark></PrivateRoutes>,
-        loader:({params})=>fetch(`http://localhost:5000/AllToyShow/${params.id}`)
+        loader:({params})=>fetch(`https://toy-web-server-side.vercel.app/AllToyShow/${params.id}`)
       },
       {
         path:'/update/:id',
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/addBook/${params.id}`)
+        loader:({params})=>fetch(`https://toy-web-server-side.vercel.app/addBook/${params.id}`)
       },
       {
         path:'/myToy',
