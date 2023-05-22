@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 const Update = () => {
   const AllToy = useLoaderData();
   console.log(AllToy);
-  const { customerName, photo, price, email, picture, category, _id } = AllToy;
+  const { customerName,name, photo, price, email, picture, category, _id } = AllToy;
 
   const handleUpdateToy = (e) => {
     e.preventDefault();
@@ -18,6 +18,7 @@ const Update = () => {
 
     const newToy = {
       customerName: name,
+      name,
       quantity,
       category,
       about,
@@ -46,7 +47,7 @@ const Update = () => {
     <div>
       <div className=" bg-red-200 p-10 mt-5 mb-5 rounded-xl">
         <h2 className="text-3xl text-center mb-4 font-extrabold">
-          Update Your Toy {customerName}
+          Update Your Toy {name}
         </h2>
         <form onSubmit={handleUpdateToy}>
           {/* Row */}
@@ -59,8 +60,21 @@ const Update = () => {
                 <input
                   type="text"
                   name="name"
-                  defaultValue={customerName}
+                  defaultValue={name}
                   placeholder="Coffee Name"
+                  className="input input-bordered w-full"
+                />
+              </label>
+            </div>
+            <div className="form-control md:w-1/2 ml-4">
+              <label className="label">
+                <span className="label-text">CustomerName</span>
+              </label>
+              <label className="input-group">
+                <input
+                  type="text"
+                  name="customerName"
+                  placeholder={customerName}
                   className="input input-bordered w-full"
                 />
               </label>
