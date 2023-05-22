@@ -47,6 +47,7 @@ const MyToy = () => {
           </label>
         </th>
         <th>Name</th>
+        <th>CustomerName</th>
         <th>Email</th>
         <th>Quantity</th>
         <th>Update Button</th>

@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ toy, handleDelete }) => {
-  const { customerName, photo, email, category, _id, quantity } = toy;
+  const { customerName, photo, email, category, _id, quantity,name } = toy;
+  console.log(toy)
 
   return (
     <tr>
@@ -37,9 +38,12 @@ const BookCard = ({ toy, handleDelete }) => {
             </div>
           </div>
           <div>
-            <div className="font-bold">{customerName}</div>
+            <div className="font-bold">{name}</div>
           </div>
         </div>
+      </td>
+      <td>
+        <span className="badge badge-ghost badge-sm">{customerName}</span>
       </td>
       <td>
         <span className="badge badge-ghost badge-sm">{email}</span>

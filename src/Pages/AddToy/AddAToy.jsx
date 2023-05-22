@@ -15,13 +15,15 @@ const AddAToy = () => {
     const form = e.target;
     const email = form.email.value;
     const name = form.name.value;
+    const customerName = form.customerName.value;
     const photo = form.photo.value;
     const quantity = form.quantity.value;
     const category = form.category.value;
     const price = form.price.value;
 
     const CheckBook = {
-      customerName: name,
+      customerName: customerName,
+      name,
       email,
       SubCategory: category,
       photo,
@@ -56,7 +58,7 @@ const AddAToy = () => {
             <div className="form-control">
               <input
                 type="text"
-                name="name"
+                name="customerName"
                 required
                 placeholder="Name"
                 defaultValue={user?.displayName}
