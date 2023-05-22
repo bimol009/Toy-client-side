@@ -1,6 +1,8 @@
 import React from 'react';
 import GallerySection from '../GallarySection/GallerySection';
 import ReactTabs from '../ReactTabs/ReactTabs';
+import MySection from '../Section/MySection';
+import StyleToySection from '../Section/StyleToySection';
 
 import CaroBanner from './CaroBanner/CaroBanner';
 
@@ -9,10 +11,12 @@ import CaroBanner from './CaroBanner/CaroBanner';
 const Home = () => {
     return (
         <div>
-          <h2>home</h2>
+  
           <CaroBanner></CaroBanner>
           <GallerySection></GallerySection>
           <ReactTabs></ReactTabs>
+          <MySection></MySection>
+          <StyleToySection></StyleToySection>
         </div>
     );
 };

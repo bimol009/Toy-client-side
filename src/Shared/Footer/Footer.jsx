@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Footer = () => {
-
   const { user, logOutEmail } = useContext(AuthContext);
 
   const handleLogout = () => {
@@ -14,119 +13,50 @@ const Footer = () => {
   };
   return (
     <div className="rounded">
-      <footer className="footer p-10 bg-black text-white rounded-xl">
-        <div>
-        <>
-      <li className="font-bold text-3xl">
-        <Link>Baby Toy</Link>
-      </li>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-
-      <li>
-        <Link>All Toys</Link>
-      </li>
-      <li>
-        <a>Blog</a>
-      </li>
-      <li>
-        <a>Contact</a>
-      </li>
-      {user?.email ? (
-        <li>
-          <>
-          
-            <li>
-              <Link to="/bookings">Add a Toy</Link>
-            </li>
-            <button onClick={handleLogout}>Logout</button>
-          </>
-        </li>
-      ) : (
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      )}
-    </>
-        </div>
-        <div>
-        <>
-      <li className="font-bold text-3xl">
-        <Link>Baby Toy</Link>
-      </li>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-
-      <li>
-        <Link>All Toys</Link>
-      </li>
-      <li>
-        <a>Blog</a>
-      </li>
-      <li>
-        <a>Contact</a>
-      </li>
-      {user?.email ? (
-        <li>
-          <>
-          
-            <li>
-              <Link to="/bookings">Add a Toy</Link>
-            </li>
-            <button onClick={handleLogout}>Logout</button>
-          </>
-        </li>
-      ) : (
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      )}
-    </>
-        </div>
-        <div>
-        <>
-      <li className="font-bold text-3xl">
-        <Link>Baby Toy</Link>
-      </li>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-
-      <li>
-        <Link>All Toys</Link>
-      </li>
-      <li>
-        <a>Blog</a>
-      </li>
-      <li>
-        <a>Contact</a>
-      </li>
-      {user?.email ? (
-        <li>
-          <>
-          
-            <li>
-              <Link to="/bookings">Add a Toy</Link>
-            </li>
-            <button onClick={handleLogout}>Logout</button>
-          </>
-        </li>
-      ) : (
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      )}
-    </>
-        </div>
-      </footer>
-      <footer className="footer px-10 py-4 border-t bg-black text-white border-base-300 rounded-xl">
+    
+      <footer className="footer px-10 py-4 border-t bg-red-600 text-white border-base-300 rounded-xl">
         <div className="items-center grid-flow-col">
-       <img src="https://i.ibb.co/tQt2vL9/240-F-248279748-Re9qnj7-RFjtf2lb-LVqnr5-SAQ7h-WGx3-DE-removebg-preview.png" alt="" />
-          <p>
-          Baby Toy
-          </p>
+          <img
+            src="https://i.ibb.co/tQt2vL9/240-F-248279748-Re9qnj7-RFjtf2lb-LVqnr5-SAQ7h-WGx3-DE-removebg-preview.png"
+            alt=""
+          />
+          <p className="font-bold text-3xl  text-slate-800">BABY TOY</p>
+        </div>
+        <div>
+          <div className="mt-10 text-center p-3 list-none font-bold">
+            <>
+              <li className="font-bold text-3xl mb-2">
+                <Link>BABY TOY</Link>
+              </li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+
+              <li>
+              <Link to='/allToy'>All Toys</Link>
+              </li>
+              <li>
+                <a>Blog</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
+              {user?.email ? (
+                <li>
+                  <>
+                    <li>
+                      <Link to="/bookings">Add a Toy</Link>
+                    </li>
+                    <button onClick={handleLogout}>Logout</button>
+                  </>
+                </li>
+              ) : (
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              )}
+            </>
+          </div>
         </div>
         <div className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">

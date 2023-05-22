@@ -33,8 +33,8 @@ const ReactTabs = () => {
     }, []);
   return (
     <div>
-      <Tabs className="text-center">
-        <TabList >
+      <Tabs className="text-center rounded">
+        <TabList className='bg-red-600 text-white mb-5 p-4 mt-5 rounded'>
           <Tab>Sports Car</Tab>
           <Tab>Truck</Tab>
           <Tab>Police Car</Tab>
@@ -42,8 +42,8 @@ const ReactTabs = () => {
         </TabList>
 
         <TabPanel>
-          <h2>sportsCar : {sportsCar.length}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+         
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {
                 sportsCar?.map(sports=><Sports key={sports._id} sports={sports}></Sports>)
             }
@@ -51,7 +51,7 @@ const ReactTabs = () => {
         </TabPanel>
         <TabPanel>
         <h2>truck : {truck.length}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {
                 truck?.map(truckCar=><Truck key={truckCar._id} truckCar={truckCar}></Truck>)
             }
@@ -59,7 +59,7 @@ const ReactTabs = () => {
         </TabPanel>
         <TabPanel>
         <h2>police : {police.length}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {
                 police?.map(policeCar=><Police key={policeCar._id} policeCar={policeCar}></Police>)
             }
@@ -67,7 +67,7 @@ const ReactTabs = () => {
         </TabPanel>
         <TabPanel>
         <h2>fireTruck : {fireTruck.length}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
             {
                 fireTruck?.map(fire=><FireTruck key={fire._id} fire={fire}></FireTruck>)
             }
