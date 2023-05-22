@@ -16,7 +16,7 @@ const Update = () => {
     const quantity = from.quantity.value;
     const category = from.category.value;
     const about = from.about.value;
-    const photo = from.photo.value;
+    const picture = from.photo.value;
     const price = from.price.value;
 
     const newToy = {
@@ -25,7 +25,7 @@ const Update = () => {
       quantity,
       category,
       about,
-      photo,
+      picture,
       price,
     };
   

@@ -29,6 +29,7 @@ const AddAToy = () => {
       email,
       SubCategory: category,
       photo,
+      picture,
       quantity,
       price: price,
       about
@@ -93,7 +94,7 @@ const AddAToy = () => {
                 type="text"
                 name="photo"
                 required
-                placeholder="photo url"
+                placeholder={picture}
                 className="input input-bordered"
               />
             </div>
