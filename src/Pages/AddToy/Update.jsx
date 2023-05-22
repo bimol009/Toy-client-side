@@ -1,7 +1,9 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import UseTitle from "../HookPageTitle/UseTitle";
 
 const Update = () => {
+  UseTitle("Update Toy");
   const AllToy = useLoaderData();
  
   const { customerName,name, photo, price, email, picture, category, _id } = AllToy;

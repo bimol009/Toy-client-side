@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
+import UseTitle from "../Pages/HookPageTitle/UseTitle";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
+  UseTitle("Registration Page");
   const [showPass, setShowPass] = useState(false);
 
   const [error, setError] = useState("");

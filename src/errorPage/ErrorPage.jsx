@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import UseTitle from '../Pages/HookPageTitle/UseTitle';
 import './ErrorPage.css'
 
 const ErrorPage = () => {
+    UseTitle("Error");
 
     const navigate = useNavigate();
     const navHandler =()=>{

@@ -1,9 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import UseTitle from "../HookPageTitle/UseTitle";
 import AllToyCard from "./AllToyCard";
 
 const AllToy = () => {
+  UseTitle("ALL-Toy");
   const [allToy, setAllToy] = useState();
   const [filtered, setFilteredData] = useState(allToy);
   const [showPage, setShowPage] = useState(1);

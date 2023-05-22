@@ -4,8 +4,10 @@ import { useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
 import BookCard from "./BookCard";
+import UseTitle from "../HookPageTitle/UseTitle";
 
 const MyToy = () => {
+  UseTitle("My Toy");
   const [bookCard, setBookCard] = useState([]);
   const { user } = useContext(AuthContext);
   const url = `https://toy-web-server-side.vercel.app/addBook?email=${user?.email}`;

@@ -1,9 +1,11 @@
 import React, { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import UseTitle from "../Pages/HookPageTitle/UseTitle";
 import { AuthContext } from "../Provider/AuthProvider";
 import './Login.css'
 
 const Login = () => {
+  UseTitle("Login Page");
   const [showPass, setShowPass] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");

@@ -2,8 +2,10 @@ import React from "react";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import UseTitle from "../HookPageTitle/UseTitle";
 
 const AddAToy = () => {
+  UseTitle("ADD YOUR TOY");
   const checkOutPage = useLoaderData();
 
   const { user } = useContext(AuthContext);
