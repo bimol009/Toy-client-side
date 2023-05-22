@@ -20,7 +20,7 @@ const Footer = () => {
             src="https://i.ibb.co/tQt2vL9/240-F-248279748-Re9qnj7-RFjtf2lb-LVqnr5-SAQ7h-WGx3-DE-removebg-preview.png"
             alt=""
           />
-          <p className="font-bold text-3xl  text-slate-800">BABY TOY</p>
+          <p className="font-bold text-3xl  text-orange-50">BABY TOY</p>
         </div>
         <div>
           <div className="mt-10 text-center p-3 list-none font-bold">
