@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Marquee from "react-fast-marquee";
 import { Outlet } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import Footer from "./../Shared/Footer/Footer";
 import './Main.css'
 
+
 const Main = () => {
+
   return (
     <div className="mt-2 mb-2 container mx-auto">
       <Navbar></Navbar>

@@ -1,7 +1,12 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StyleToySection = () => {
+  useEffect(()=>{
+    AOS.init()
+  },[])
   return (
     <div>
       <div className="text-center">
@@ -17,7 +22,7 @@ const StyleToySection = () => {
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               src="https://i.ibb.co/ZSfn8d4/mohit-suthar-0u-ZMa-Y-Ho4-unsplash.jpg"
-              className="max-w-xl rounded-lg shadow-2xl"
+              className="max-w-xl rounded-lg shadow-2xl"data-aos="flip-left"
             />
             <div className="">
               <h1 className="text-5xl font-bold">
@@ -39,7 +44,7 @@ const StyleToySection = () => {
           <div className="hero-content flex-col lg:flex-row">
             <img
               src="https://i.ibb.co/YpB85yd/gabriel-vasiliu-K-dq-I8-c-UMQ-unsplash.jpg"
-              className="max-w-xl rounded-lg shadow-2xl"
+              className="max-w-xl rounded-lg shadow-2xl"data-aos="flip-right"
             />
             <div className="text-end">
               <h1 className="text-5xl font-bold">

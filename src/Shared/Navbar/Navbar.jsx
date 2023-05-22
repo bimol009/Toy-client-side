@@ -34,7 +34,7 @@ const Navbar = () => {
         <li>
           <>
           {user && (
-                <img className="profile-img" src={user.photoURL} alt="" />
+                <img className="profile-img" src={user.photoURL} alt="" title={user.displayName} />
               )}
               {user && <p className="text-white">{user.displayName}</p>}
             <li>

@@ -7,7 +7,7 @@ const FireTruck = ({fire}) => {
     const {price,picture,name,_id,rating}= fire
     return (
         <div>
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-96 bg-base-100 shadow-xl" data-aos="flip-left">
       <figure>
         <img src={picture} alt="Shoes" />
       </figure>

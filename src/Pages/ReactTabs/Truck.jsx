@@ -7,7 +7,7 @@ const Truck = ({truckCar}) => {
     const {price,picture,name,_id,rating}= truckCar
     return (
         <div>
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-96 bg-base-100 shadow-xl " data-aos="flip-right">
       <figure>
         <img src={picture} alt="Shoes" />
       </figure>

@@ -6,7 +6,7 @@ import Rating from "react-rating";
 
 const AllToyCard = ({ toy }) => {
   const { price, picture, name, _id, rating, category,quantity } = toy;
-  console.log(toy);
+ 
 
   return (
     <tr>

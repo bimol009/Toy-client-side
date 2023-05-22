@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './GallerySection.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
   
 
 const GallerySection = () => {
+    useEffect(()=>{
+        AOS.init()
+      },[])
     return (
-        <div className='text-center'>
+        <div className='text-center'data-aos="fade-down">
             <div className='text-center mt-10 mb-10'>
                 <h2 className='text-4xl mb-3 font-extrabold'>Gallery <span className='text-red-400'>Section</span> Toy</h2>
                 <p className='text-2xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, beatae!</p>

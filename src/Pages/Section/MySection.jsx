@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MySection.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MySection = () => {
+  useEffect(()=>{
+    AOS.init()
+  },[])
   return (
     <div className="mb-10">
       <div className="text-center mt-10 mb-10">
@@ -12,7 +17,7 @@ const MySection = () => {
           My name Is Bimol Sarker. I read Cse in Habhit Tangail.
         </p>
       </div>
-
+      <div data-aos="fade-up">
       <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center text-justify">
         <div className=" img-content">
           <div className="text-center mt-10 mb-10">
@@ -28,9 +33,10 @@ const MySection = () => {
         <div className="img-section">
           <img
             src="https://i.ibb.co/LgzY0Q1/248672140-237903104922971-3040476626125467773-n-removebg-preview.png"
-            alt=""
+            alt=""data-aos="flip-up"
           />
         </div>
+      </div>
       </div>
     </div>
   );
