@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import UseTitle from "../HookPageTitle/UseTitle";
 import AllToyCard from "./AllToyCard";
 
@@ -11,23 +11,29 @@ const AllToy = () => {
   const [showPage, setShowPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [value, setValue] = useState("");
-  
+  const [asc, setAsc] = useState(true);
 
+  const searchRef = useRef(null)
+  const [search,setSearch] = useState("")
 
   useEffect(() => {
-    fetch(`https://toy-web-server-side.vercel.app/AllToyShow?page=${showPage}`)
+    fetch(
+      `https://toy-web-server-side.vercel.app/AllToyShow?search=${search}&page=${showPage}&sort=${
+        asc ? "asc" : "desc"
+      }`
+    )
       .then((res) => res.json())
       .then((data) => {
         setAllToy(data.data);
         setTotalPages(data.totalPages);
-        setFilteredData(data.data)
+        setFilteredData(data.data);
       });
-  }, [showPage]);
+  }, [search,showPage, asc]);
 
   const handleFilter = (event) => {
-    setValue(event.target.value)
+    setValue(event.target.value);
     const keyword = event.target.value;
-    const filtered = allToy?.filter(item =>
+    const filtered = allToy?.filter((item) =>
       item.name.toLowerCase().includes(keyword.toLowerCase())
     );
     setFilteredData(filtered);
@@ -35,7 +41,14 @@ const AllToy = () => {
 
   const handlePageChange = (page) => {
     setShowPage(page);
-  };
+
+  }
+  const handleSearch = () => {
+    console.log(searchRef.current.value)
+    setSearch(searchRef.current.value)
+
+  }
+
 
   return (
     <div className="mt-5">
@@ -55,14 +68,9 @@ const AllToy = () => {
               </svg>
             </a>
             <ul className="p-2 bg-base-100">
-              <li>
-                <button className="btn btn-primary text-white">Acending</button>
-              </li>
-              <li>
-                <button className="btn btn-primary text-white">
-                  Decending
-                </button>
-              </li>
+              <button className="btn" onClick={() => setAsc(!asc)}>
+                {asc ? "Descending" : "Ascending"}
+              </button>
             </ul>
           </li>
         </ul>
@@ -74,9 +82,41 @@ const AllToy = () => {
           placeholder="Search"
           className="input input-bordered"
           value={value}
-          onChange={(e)=>{handleFilter(e)}}
+          onChange={(e) => {
+            handleFilter(e);
+          }}
         />
       </div>
+
+      <div className="form-control">
+        <div className="input-group">
+          <input
+            type="text"
+            ref={searchRef}
+            placeholder="Search…"
+            className="input input-bordered"
+          />
+          <button onClick={handleSearch} className="btn btn-square">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+     
 
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
@@ -91,10 +131,9 @@ const AllToy = () => {
             </tr>
           </thead>
           <tbody>
-            {filtered
-              ?.map((toy) => (
-                <AllToyCard key={toy._id} toy={toy}></AllToyCard>
-              ))}
+            {filtered?.map((toy) => (
+              <AllToyCard key={toy._id} toy={toy}></AllToyCard>
+            ))}
           </tbody>
         </table>
       </div>

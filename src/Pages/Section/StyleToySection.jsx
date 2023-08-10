@@ -2,6 +2,7 @@ import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './StyleToySection.css'
 
 const StyleToySection = () => {
   useEffect(()=>{
@@ -17,9 +18,9 @@ const StyleToySection = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, beatae!
         </p>
       </div>
-      <div className="rounded-xl p-5 mt-3 mb-3 bg-red-200">
+      <div className="rounded-xl p-5 mt-3 mb-3">
         <div className="hero mt-5">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content grid grid-cols-1 md:grid-cols-2">
             <img
               src="https://i.ibb.co/ZSfn8d4/mohit-suthar-0u-ZMa-Y-Ho4-unsplash.jpg"
               className="max-w-xl rounded-lg shadow-2xl"data-aos="flip-left"
@@ -41,12 +42,14 @@ const StyleToySection = () => {
         </div>
 
         <div className="hero mb-5 ">
-          <div className="hero-content flex-col lg:flex-row">
+          <div className="hero-content grid grid-cols-1 md:grid-cols-2">
+            <div>
             <img
               src="https://i.ibb.co/YpB85yd/gabriel-vasiliu-K-dq-I8-c-UMQ-unsplash.jpg"
               className="max-w-xl rounded-lg shadow-2xl"data-aos="flip-right"
             />
-            <div className="text-end">
+            </div>
+            <div >
               <h1 className="text-5xl font-bold">
                 BABY <span className="text-red-500">TOY</span> SECTION!
               </h1>

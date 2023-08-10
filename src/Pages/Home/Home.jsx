@@ -4,6 +4,8 @@ import UseTitle from '../HookPageTitle/UseTitle';
 import ReactTabs from '../ReactTabs/ReactTabs';
 import MySection from '../Section/MySection';
 import StyleToySection from '../Section/StyleToySection';
+import ToyGallary from '../Section/ToyGallary/ToyGallary';
+import ToyShowSection from '../Section/ToyShow/ToyShowSection';
 
 import CaroBanner from './CaroBanner/CaroBanner';
 
@@ -18,7 +20,10 @@ const Home = () => {
           <GallerySection></GallerySection>
           <ReactTabs></ReactTabs>
           <MySection></MySection>
+          <ToyGallary></ToyGallary>
           <StyleToySection></StyleToySection>
+          <ToyShowSection></ToyShowSection>
+          
         </div>
     );
 };

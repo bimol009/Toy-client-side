@@ -8,7 +8,7 @@ const MySection = () => {
     AOS.init()
   },[])
   return (
-    <div className="mb-10">
+    <div>
       <div className="text-center mt-10 mb-10">
         <h2 className="text-4xl mb-3 font-extrabold">
           My Own <span className="text-red-400">Section</span>

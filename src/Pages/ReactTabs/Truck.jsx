@@ -2,15 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight, FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
+import './ReactTab.css'
 
 const Truck = ({truckCar}) => {
     const {price,picture,name,_id,rating}= truckCar
     return (
         <div>
     <div className="card w-96 bg-base-100 shadow-xl " data-aos="flip-right">
-      <figure>
-        <img src={picture} alt="Shoes" />
-      </figure>
+    <figure className="card-image-container">
+          <img src={picture} alt="Shoes" className="card-image" />
+        </figure>
       <div className="card-body">
         <h2 className="card-title text-center">{name}</h2>
   

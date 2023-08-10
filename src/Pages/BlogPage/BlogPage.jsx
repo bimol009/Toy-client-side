@@ -1,6 +1,7 @@
 import React from 'react';
 import UseTitle from '../HookPageTitle/UseTitle';
 
+
 const BlogPage = () => {
     UseTitle("Blog Page");
     return (

@@ -14,7 +14,7 @@ const GallerySection = () => {
         <div className='text-center'data-aos="fade-down">
             <div className='text-center mt-10 mb-10'>
                 <h2 className='text-4xl mb-3 font-extrabold'>Gallery <span className='text-red-400'>Section</span> Toy</h2>
-                <p className='text-2xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, beatae!</p>
+                
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center image gap-6 mt-10 mb-10'>
                 <img src="https://i.ibb.co/Gc6HTY3/atish-sewmangel-NYb-Tdr-Bh740-unsplash.jpg" alt="" />

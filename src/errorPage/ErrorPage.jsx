@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import UseTitle from '../Pages/HookPageTitle/UseTitle';
 import './ErrorPage.css'
