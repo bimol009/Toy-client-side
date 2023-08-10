@@ -8,9 +8,7 @@ const CaroBanner = () => {
         <h2 className="text-4xl mb-3 font-extrabold">
           Caro <span className="text-red-400">Section</span> Toy
         </h2>
-        <p className="text-2xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, beatae!
-        </p>
+   
       </div>
 
       <div className="carousel">
