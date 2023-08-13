@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className="rounded">
     
-      <footer className="footer px-10 py-4 border-t bg-red-600 text-white border-base-300 rounded-xl">
+      <footer className="footer px-10 py-4 border-t bg-red-600 text-white rounded-xl">
         <div className="items-center grid-flow-col">
           <img
             src="https://i.ibb.co/tQt2vL9/240-F-248279748-Re9qnj7-RFjtf2lb-LVqnr5-SAQ7h-WGx3-DE-removebg-preview.png"

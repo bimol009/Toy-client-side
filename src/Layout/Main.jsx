@@ -1,10 +1,13 @@
 import React,{useEffect} from "react";
 import Marquee from "react-fast-marquee";
 import { Outlet } from "react-router-dom";
+import FootSection from "../Shared/Footer/FootSection";
 import Navbar from "../Shared/Navbar/Navbar";
-import Footer from "./../Shared/Footer/Footer";
+// import NavSection from "../Shared/Navbar/NavSection";
+// import Footer from "./../Shared/Footer/Footer";
 import './Main.css'
-
+// import Navbar from './../Shared/Navbar/Navbar';
+// 
 
 const Main = () => {
 
@@ -12,7 +15,7 @@ const Main = () => {
     <div className="mt-2 mb-2 container mx-auto">
       <Navbar></Navbar>
       <Marquee className="rounded-xl">
-       <div  className="flex items-center  bg-red-200 mt-5 main ">
+       <div  className="flex items-center  mt-5 main ">
        <img src="https://i.ibb.co/q70Wk6j/louis-magnotti-r-Ecn8-OB83-EI-unsplash-removebg-preview.png" alt="" />
         <img src="https://i.ibb.co/x2QsLTP/istockphoto-182680549-170667a-removebg-preview.png" alt="" />
         <img src="https://i.ibb.co/t32TQS6/call-me-fred-v-Vqc-DEgw-LY-unsplash-removebg-preview.png" alt="" />
@@ -24,7 +27,7 @@ const Main = () => {
        </div>
       </Marquee>
       <Outlet></Outlet>
-      <Footer />
+      <FootSection />
     </div>
   );
 };

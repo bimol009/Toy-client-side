@@ -10,7 +10,7 @@ import 'react-tabs/style/react-tabs.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-    <div className='p-1'>
+    <div>
     <RouterProvider router={router}></RouterProvider>
     </div>
     </AuthProvider>

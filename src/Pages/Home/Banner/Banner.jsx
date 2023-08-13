@@ -6,13 +6,13 @@ const Banner = () => {
   return (
     <div>
         <SectionTitle heading={"Toy Show"}></SectionTitle>
-        <div className="bg-red-200 p-10 section">
+        <div className=" p-10 section">
         
-      <div className="img-content-sec grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="img-content-sec grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="img-sec">
-          <img src="https://i.ibb.co/5G0Tb3r/autos-toy-cars-play-vehicles.jpg" alt="" />
+          <img src="https://i.ibb.co/dkcXWG2/New-Big-Size-4-4-SUV-Kids-Toys-Car-Children-Ride-on-Electric-Drive-Car-Baby-Toy-Car-with-Battery-Ope.png" alt="" />
         </div>
-        <div className="img-con text-center">
+        <div className="img-con">
           <h2 className="text-3xl font-bold">Show Toy!</h2>
           <h4 className="text-2xl my-4">The New Standard In Customizability & Speed</h4>
           <p className="mb-4 text-xl">
